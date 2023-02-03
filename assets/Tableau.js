@@ -7,8 +7,20 @@ const Tableau = [
     title: "Protogen",
     link: [
       {
-        link: require("../assets/myAssets/protogenFull.png"),
+        link: require("../assets/myAssets/protogen/protogenFull.png"),
         twitter: "",
+      },
+      {
+        link: require("../assets/myAssets/protogen/protogen-HearterMobs.jpg"),
+        twitter: "@HearterMobs",
+      },
+      {
+        link: require("../assets/myAssets/protogen/protogen-Sir_Lorart.jpg"),
+        twitter: "@Sir_Lorart",
+      },
+      {
+        link: require("../assets/myAssets/protogen/protogen-thanshuhai.png"),
+        twitter: "@thanshuhai",
       },
     ],
   },
@@ -20,7 +32,7 @@ const Tableau = [
     link: [
       {
         titleLogo: "Western Dragon",
-        logo: require("../assets/myAssets/logo/logoDragon.jpg"),
+        logo: require("../assets/myAssets/logo/logoDragon.png"),
         versPage: "Description",
         title: "Western Dragon",
         link: [
@@ -40,7 +52,7 @@ const Tableau = [
       },
       {
         titleLogo: "Asian Dragon",
-        logo: require("../assets/myAssets/logo/logoEasternDragon.jpg"),
+        logo: require("../assets/myAssets/logo/logoEasternDragon.png"),
         versPage: "Description",
         title: "Asian Dragon",
         link: [
@@ -76,7 +88,7 @@ const Tableau = [
       },
       {
         titleLogo: "Dragonnet",
-        logo: require("../assets/myAssets/logo/logoDragonnet.jpg"),
+        logo: require("../assets/myAssets/logo/logoDragonnet.png"),
         versPage: "Description",
         title: "Dragonnet",
         link: [
@@ -88,7 +100,7 @@ const Tableau = [
       },
       {
         titleLogo: "Hydre",
-        logo: require("../assets/myAssets/logo/logoHydre.jpg"),
+        logo: require("../assets/myAssets/logo/logoHydre.png"),
         versPage: "Description",
         title: "Hydre",
         link: [
