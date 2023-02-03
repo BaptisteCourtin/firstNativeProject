@@ -9,7 +9,6 @@ import {
 } from "react-native";
 
 import ChooseCard from "../components/ChooseCard";
-
 import KindStyles from "../style/pages/Kind.scss";
 
 const Kind = ({ navigation, route }) => {
@@ -23,86 +22,18 @@ const Kind = ({ navigation, route }) => {
         <View style={styles.container}>
           <Text style={KindStyles.title}>{route.params.title}</Text>
 
-          {/*
-					western dragon
-					asian dragon
-					hydre
-					wyvern
-					aquatic dragon
-					dragonnet
-					*/}
-
-          <ChooseCard
-            title={"Western Dragon"}
-            link={require("../assets/myAssets/logo/logoDragon.jpg")}
-            onPress={() =>
-              navigation.navigate("Description", {
-                title: "Western Dragon",
-                link1: require("../assets/myAssets/dragon/dragon-nasuno_Posi.png"),
-                link2: require("../assets/myAssets/dragon/dragon1-Spareribs_777.png"),
-                link3: require("../assets/myAssets/dragon/dragon2-gamazo_ooo.png"),
-              })
-            }
-          />
-
-          <ChooseCard
-            title={"Asian Dragon"}
-            link={require("../assets/myAssets/logo/logoEasternDragon.jpg")}
-            onPress={() =>
-              navigation.navigate("Description", {
-                title: "Asian Dragon",
-                link1: require("../assets/myAssets/dragon/easternDragon-ArtByZephra.png"),
-                link2: require("../assets/myAssets/dragon/easternDragon-Azany_artist.jpg"),
-                link3: require("../assets/myAssets/dragon/easternDragon-nasuno_Posi.png"),
-              })
-            }
-          />
-
-          <ChooseCard
-            title={"Aquatic Dragon"}
-            link={require("../assets/myAssets/logo/logoDragon.jpg")}
-            onPress={() =>
-              navigation.navigate("Description", {
-                title: "Aquatic Dragon",
-                link1: require("../assets/myAssets/dragon/aquaticDragon-GlowingSpirit_.png"),
-                link2: require("../assets/myAssets/dragon/aquaticDragon-nasuno_Posi.png"),
-              })
-            }
-          />
-
-          <ChooseCard
-            title={"Dragonnet"}
-            link={require("../assets/myAssets/logo/logoEasternDragon.jpg")}
-            onPress={() =>
-              navigation.navigate("Description", {
-                title: "Dragonnet",
-                link1: require("../assets/myAssets/dragon/dragonnet.png"),
-              })
-            }
-          />
-
-          <ChooseCard
-            title={"Hydre"}
-            link={require("../assets/myAssets/logo/logoHydre.jpg")}
-            onPress={() =>
-              navigation.navigate("Description", {
-                title: "Oriental Dragon",
-                link1: require("../assets/myAssets/dragon/hydre.jpg"),
-              })
-            }
-          />
-
-          <ChooseCard
-            title={"Wyvern"}
-            link={require("../assets/myAssets/logo/LogoWyvern.png")}
-            onPress={() =>
-              navigation.navigate("Description", {
-                title: "Wyvern",
-                link1: require("../assets/myAssets/dragon/wyvern2-GlowingSpirit_.png"),
-                link2: require("../assets/myAssets/dragon/wyvern-GlowingSpirit_.png"),
-              })
-            }
-          />
+          {route.params.link.map((each) => (
+            <ChooseCard
+              title={each.titleLogo}
+              link={each.logo}
+              onPress={() =>
+                navigation.navigate(each.versPage, {
+                  title: each.title,
+                  link: each.link,
+                })
+              }
+            />
+          ))}
 
           <StatusBar style="auto" />
         </View>

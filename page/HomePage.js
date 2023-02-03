@@ -11,71 +11,56 @@ import {
 
 import ChooseCard from "../components/ChooseCard";
 import HomePageStyles from "../style/pages/HomePage.scss";
+import Tableau from "../assets/Tableau";
 
 export default function HomePage({ navigation }) {
   return (
-    <ImageBackground
-      source={require("../assets/myAssets/bg1.jpg")}
-      resizeMode="cover"
-      style={HomePageStyles.bg}
-    >
-      <ScrollView>
-        <View style={styles.container}>
-          <Text style={[HomePageStyles.title, HomePageStyles.textShadowBox]}>
-            Hello World
-          </Text>
-          <Image
-            style={[HomePageStyles.mainImage, HomePageStyles.shadowBox]}
-            source={require("../assets/myAssets/logo/protoLogo.jpg")}
-          />
-          {/* --- */}
-          <ChooseCard
-            title={"Protogen"}
-            link={require("../assets/myAssets/logo/protoLogo.jpg")}
-            onPress={() =>
-              navigation.navigate("Description", {
-                title: "Protogen",
-                link1: require("../assets/myAssets/protogenFull.png"),
-              })
-            }
-          />
-          <ChooseCard
-            title={"Dragon"}
-            link={require("../assets/myAssets/logo/dragonLogo.jpg")}
-            onPress={() =>
-              navigation.navigate("Kind", {
-                title: "Kind of Dragons",
-              })
-            }
-          />
-          <ChooseCard
-            title={"Synth"}
-            link={require("../assets/myAssets/logo/synthLogo.jpg")}
-            onPress={() =>
-              navigation.navigate("Description", {
-                title: "Protogen",
-                link1: require("../assets/myAssets/synthFace.png"),
-                link2: require("../assets/myAssets/synthFaceReal.png"),
-              })
-            }
-          />
-          {/* --- */}
-          <Button
-            title="Navigate to second screen with french"
-            onPress={() =>
-              navigation.navigate("Second", { language: "french" })
-            }
-          />
-          <Button
-            title="Navigate to second screen with english"
-            onPress={() =>
-              navigation.navigate("Second", { language: "english" })
-            }
-          />
-          <StatusBar style="auto" />
-        </View>
-      </ScrollView>
-    </ImageBackground>
+    Tableau && (
+      <ImageBackground
+        source={require("../assets/myAssets/bg1.jpg")}
+        resizeMode="cover"
+        style={HomePageStyles.bg}
+      >
+        <ScrollView>
+          <View style={styles.container}>
+            <Text style={[HomePageStyles.title, HomePageStyles.textShadowBox]}>
+              Hello World
+            </Text>
+            <Image
+              style={[HomePageStyles.mainImage, HomePageStyles.shadowBox]}
+              source={require("../assets/myAssets/logo/protoLogo.jpg")}
+            />
+
+            {Tableau.map((each) => (
+              <ChooseCard
+                title={each.titleLogo}
+                link={each.logo}
+                onPress={() =>
+                  navigation.navigate(each.versPage, {
+                    title: each.title,
+                    link: each.link,
+                  })
+                }
+              />
+            ))}
+
+            <Button
+              title="Navigate to second screen with french"
+              onPress={() =>
+                navigation.navigate("Second", { language: "french" })
+              }
+            />
+            <Button
+              title="Navigate to second screen with english"
+              onPress={() =>
+                navigation.navigate("Second", { language: "english" })
+              }
+            />
+            <StatusBar style="auto" />
+          </View>
+        </ScrollView>
+      </ImageBackground>
+    )
   );
 }
 

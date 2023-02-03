@@ -21,27 +21,13 @@ const Description = ({ navigation, route }) => {
         <View style={styles.container}>
           <Text style={DescriptionStyles.title}>{route.params.title}</Text>
 
-          {/*  faire un map */}
-
           <View style={DescriptionStyles.imageContainer}>
-            <Image
-              style={[DescriptionStyles.image, styles.resize]}
-              source={route.params.link1}
-            />
-
-            {route.params.link2 && (
+            {route.params.link.map((each) => (
               <Image
                 style={[DescriptionStyles.image, styles.resize]}
-                source={route.params.link2}
+                source={each}
               />
-            )}
-
-            {route.params.link3 && (
-              <Image
-                style={[DescriptionStyles.image, styles.resize]}
-                source={route.params.link3}
-              />
-            )}
+            ))}
           </View>
 
           <StatusBar style="auto" />
