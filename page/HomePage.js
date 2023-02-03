@@ -31,8 +31,9 @@ export default function HomePage({ navigation }) {
               source={require("../assets/myAssets/logo/protoLogo.jpg")}
             />
 
-            {Tableau.map((each) => (
+            {Tableau.map((each, index) => (
               <ChooseCard
+                key={index}
                 title={each.titleLogo}
                 link={each.logo}
                 onPress={() =>

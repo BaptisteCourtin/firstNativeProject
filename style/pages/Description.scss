@@ -12,14 +12,9 @@
   margin-bottom: 1rem;
 }
 
-.imageContainer {
-  border: 2px green solid;
-}
-
 .image {
-  display: flex;
-  height: 300px;
   max-width: 90%;
-  background-color: red;
+  height: 350px;
   margin: 0.5rem 0;
+  background-color: #ff0000;
 }

@@ -22,8 +22,9 @@ const Kind = ({ navigation, route }) => {
         <View style={styles.container}>
           <Text style={KindStyles.title}>{route.params.title}</Text>
 
-          {route.params.link.map((each) => (
+          {route.params.link.map((each, index) => (
             <ChooseCard
+              key={index}
               title={each.titleLogo}
               link={each.logo}
               onPress={() =>

@@ -37,7 +37,7 @@ const Tableau = [
       },
       {
         titleLogo: "Aquatic Dragon",
-        logo: require("../assets/myAssets/logo/logoDragon.jpg"),
+        logo: require("../assets/myAssets/logo/logoAquaticDragon.png"),
         versPage: "Description",
         title: "Aquatic Dragon",
         link: [
@@ -47,7 +47,7 @@ const Tableau = [
       },
       {
         titleLogo: "Dragonnet",
-        logo: require("../assets/myAssets/logo/logoEasternDragon.jpg"),
+        logo: require("../assets/myAssets/logo/logoDragonnet.jpg"),
         versPage: "Description",
         title: "Dragonnet",
         link: [(link1 = require("../assets/myAssets/dragon/dragonnet.png"))],
@@ -56,12 +56,12 @@ const Tableau = [
         titleLogo: "Hydre",
         logo: require("../assets/myAssets/logo/logoHydre.jpg"),
         versPage: "Description",
-        title: "Oriental Dragon",
+        title: "Hydre",
         link: [(link1 = require("../assets/myAssets/dragon/hydre.jpg"))],
       },
       {
-        title: "Wyvern",
-        link: require("../assets/myAssets/logo/LogoWyvern.png"),
+        titleLogo: "Wyvern",
+        logo: require("../assets/myAssets/logo/LogoWyvern.png"),
         versPage: "Description",
         title: "Wyvern",
         link: [

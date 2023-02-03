@@ -22,10 +22,21 @@ const Description = ({ navigation, route }) => {
           <Text style={DescriptionStyles.title}>{route.params.title}</Text>
 
           <View style={DescriptionStyles.imageContainer}>
-            {route.params.link.map((each) => (
+            {route.params.link.map((each, index) => (
               <Image
-                style={[DescriptionStyles.image, styles.resize]}
+                key={index}
+                style={{
+                  width: 380,
+                  height:
+                    (380 / Image.resolveAssetSource(each).width) *
+                    Image.resolveAssetSource(each).height,
+                  marginBottom: 15,
+                  borderWidth: 5,
+                  borderColor: "cyan",
+                  borderRadius: 20,
+                }}
                 source={each}
+                resizeMode="contain"
               />
             ))}
           </View>
@@ -46,8 +57,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-  },
-  resize: {
-    resizeMode: "contain",
   },
 });
