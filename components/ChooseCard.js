@@ -2,7 +2,7 @@ import { Text, TouchableHighlight, Image, View } from "react-native";
 
 import chooseCardStyles from "../style/components/chooseCard.scss";
 
-const ChooseCard = ({ link, title, onPress }) => {
+const ChooseCard = ({ logo, title, onPress }) => {
   return (
     <TouchableHighlight
       onPress={onPress}
@@ -10,7 +10,7 @@ const ChooseCard = ({ link, title, onPress }) => {
       style={chooseCardStyles.touchableCard}
     >
       <View style={chooseCardStyles.chooseCard}>
-        <Image style={chooseCardStyles.image} source={link} />
+        <Image style={chooseCardStyles.image} source={logo} />
 
         <Text style={chooseCardStyles.text}>{title}</Text>
       </View>

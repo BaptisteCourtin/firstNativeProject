@@ -26,7 +26,7 @@ const Kind = ({ navigation, route }) => {
             <ChooseCard
               key={index}
               title={each.titleLogo}
-              link={each.logo}
+              logo={each.logo}
               onPress={() =>
                 navigation.navigate(each.versPage, {
                   title: each.title,

@@ -35,7 +35,7 @@ export default function HomePage({ navigation }) {
               <ChooseCard
                 key={index}
                 title={each.titleLogo}
-                link={each.logo}
+                logo={each.logo}
                 onPress={() =>
                   navigation.navigate(each.versPage, {
                     title: each.title,

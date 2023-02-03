@@ -12,9 +12,19 @@
   margin-bottom: 1rem;
 }
 
-.image {
-  max-width: 90%;
-  height: 350px;
-  margin: 0.5rem 0;
-  background-color: #ff0000;
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.twitter {
+  background-color: cyan;
+  margin: 0.5rem 0 2rem;
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
 }

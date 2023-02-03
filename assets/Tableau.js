@@ -5,7 +5,12 @@ const Tableau = [
     logo: require("../assets/myAssets/logo/protoLogo.jpg"),
     versPage: "Description",
     title: "Protogen",
-    link: [(link1 = require("../assets/myAssets/protogenFull.png"))],
+    link: [
+      {
+        link: require("../assets/myAssets/protogenFull.png"),
+        twitter: "",
+      },
+    ],
   },
   {
     titleLogo: "Dragons",
@@ -19,9 +24,18 @@ const Tableau = [
         versPage: "Description",
         title: "Western Dragon",
         link: [
-          (link1 = require("../assets/myAssets/dragon/dragon-nasuno_Posi.png")),
-          (link2 = require("../assets/myAssets/dragon/dragon1-Spareribs_777.png")),
-          (link3 = require("../assets/myAssets/dragon/dragon2-gamazo_ooo.png")),
+          {
+            link: require("../assets/myAssets/dragon/dragon-nasuno_Posi.png"),
+            twitter: "@nasuno_Posi",
+          },
+          {
+            link: require("../assets/myAssets/dragon/dragon1-Spareribs_777.png"),
+            twitter: "@Spareribs_777",
+          },
+          {
+            link: require("../assets/myAssets/dragon/dragon2-gamazo_ooo.png"),
+            twitter: "@gamazo_ooo",
+          },
         ],
       },
       {
@@ -30,9 +44,18 @@ const Tableau = [
         versPage: "Description",
         title: "Asian Dragon",
         link: [
-          (link1 = require("../assets/myAssets/dragon/easternDragon-ArtByZephra.png")),
-          (link2 = require("../assets/myAssets/dragon/easternDragon-Azany_artist.jpg")),
-          (link3 = require("../assets/myAssets/dragon/easternDragon-nasuno_Posi.png")),
+          {
+            link: require("../assets/myAssets/dragon/easternDragon-ArtByZephra.png"),
+            twitter: "@ArtByZephra",
+          },
+          {
+            link: require("../assets/myAssets/dragon/easternDragon-Azany_artist.jpg"),
+            twitter: "@Azany_artist",
+          },
+          {
+            link: require("../assets/myAssets/dragon/easternDragon-nasuno_Posi.png"),
+            twitter: "@nasuno_Posi",
+          },
         ],
       },
       {
@@ -41,8 +64,14 @@ const Tableau = [
         versPage: "Description",
         title: "Aquatic Dragon",
         link: [
-          (link1 = require("../assets/myAssets/dragon/aquaticDragon-GlowingSpirit_.png")),
-          (link2 = require("../assets/myAssets/dragon/aquaticDragon-nasuno_Posi.png")),
+          {
+            link: require("../assets/myAssets/dragon/aquaticDragon-GlowingSpirit_.png"),
+            twitter: "@GlowingSpirit_",
+          },
+          {
+            link: require("../assets/myAssets/dragon/aquaticDragon-nasuno_Posi.png"),
+            twitter: "@nasuno_Posi",
+          },
         ],
       },
       {
@@ -50,14 +79,24 @@ const Tableau = [
         logo: require("../assets/myAssets/logo/logoDragonnet.jpg"),
         versPage: "Description",
         title: "Dragonnet",
-        link: [(link1 = require("../assets/myAssets/dragon/dragonnet.png"))],
+        link: [
+          {
+            link: require("../assets/myAssets/dragon/dragonnet.png"),
+            twitter: "",
+          },
+        ],
       },
       {
         titleLogo: "Hydre",
         logo: require("../assets/myAssets/logo/logoHydre.jpg"),
         versPage: "Description",
         title: "Hydre",
-        link: [(link1 = require("../assets/myAssets/dragon/hydre.jpg"))],
+        link: [
+          {
+            link: require("../assets/myAssets/dragon/hydre.jpg"),
+            twitter: "",
+          },
+        ],
       },
       {
         titleLogo: "Wyvern",
@@ -65,8 +104,14 @@ const Tableau = [
         versPage: "Description",
         title: "Wyvern",
         link: [
-          (link1 = require("../assets/myAssets/dragon/wyvern2-GlowingSpirit_.png")),
-          (link2 = require("../assets/myAssets/dragon/wyvern-GlowingSpirit_.png")),
+          {
+            link: require("../assets/myAssets/dragon/wyvern2-GlowingSpirit_.png"),
+            twitter: "@GlowingSpirit_",
+          },
+          {
+            link: require("../assets/myAssets/dragon/wyvern-GlowingSpirit_.png"),
+            twitter: "@GlowingSpirit_",
+          },
         ],
       },
     ],
@@ -77,8 +122,14 @@ const Tableau = [
     versPage: "Description",
     title: "Synth",
     link: [
-      (link1 = require("../assets/myAssets/synthFace.png")),
-      (link2 = require("../assets/myAssets/synthFaceReal.png")),
+      {
+        link: require("../assets/myAssets/synthFace.png"),
+        twitter: "",
+      },
+      {
+        link: require("../assets/myAssets/synthFaceReal.png"),
+        twitter: "",
+      },
     ],
   },
 ];

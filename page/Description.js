@@ -6,6 +6,7 @@ import {
   Image,
   ImageBackground,
   ScrollView,
+  Linking,
 } from "react-native";
 
 import DescriptionStyles from "../style/pages/Description.scss";
@@ -21,23 +22,35 @@ const Description = ({ navigation, route }) => {
         <View style={styles.container}>
           <Text style={DescriptionStyles.title}>{route.params.title}</Text>
 
-          <View style={DescriptionStyles.imageContainer}>
+          <View>
             {route.params.link.map((each, index) => (
-              <Image
-                key={index}
-                style={{
-                  width: 380,
-                  height:
-                    (380 / Image.resolveAssetSource(each).width) *
-                    Image.resolveAssetSource(each).height,
-                  marginBottom: 15,
-                  borderWidth: 5,
-                  borderColor: "cyan",
-                  borderRadius: 20,
-                }}
-                source={each}
-                resizeMode="contain"
-              />
+              <View key={index} style={DescriptionStyles.imageContainer}>
+                <Image
+                  style={{
+                    width: 380,
+                    height:
+                      (380 / Image.resolveAssetSource(each.link).width) *
+                      Image.resolveAssetSource(each.link).height,
+                    borderWidth: 5,
+                    borderColor: "cyan",
+                    borderRadius: 20,
+                  }}
+                  source={each.link}
+                  resizeMode="contain"
+                />
+                {each.twitter && (
+                  <Text
+                    style={DescriptionStyles.twitter}
+                    onPress={() =>
+                      Linking.openURL(
+                        `https://twitter.com/${each.twitter.split("@")[1]}`
+                      )
+                    }
+                  >
+                    {each.twitter}
+                  </Text>
+                )}
+              </View>
             ))}
           </View>
 
